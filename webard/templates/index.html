@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Web Bard - a question and answer system!</title>
+    </head>
+    <body>
+        <div>
+            <p>Please input your question</p>
+            <form method="post">
+                <input type="text" name="q"/>
+                <input type="submit" value="go"/>
+            </form>
+        </div>
+        {% for k in kvs %}
+        <div>
+            <div class="question">
+                <P>{{k}}</P>
+            </div>
+            <div class="answer">
+                <p>{{kvs[k]}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </body>
+</html>
