@@ -10,9 +10,10 @@ bard = Bard(token=token)
 
 app = Flask(__name__)
 
+kvs = {}
+
 @app.route("/", methods=["GET", "POST"])
 def index():
-    kvs = {}
     if request.method == "POST":
         q = request.form.get("q")
         if q:
